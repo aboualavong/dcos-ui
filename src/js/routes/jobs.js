@@ -4,6 +4,7 @@ import React from "react";
 import { IndexRoute, Redirect, Route } from "react-router";
 
 import JobsTabContainer from "#PLUGINS/jobs/src/js/JobsTabContainer";
+import JobsOverview from "#PLUGINS/jobs/src/js/JobsOverview";
 import TaskDetailsTab from "#PLUGINS/services/src/js/pages/task-details/TaskDetailsTab";
 import TaskFileBrowser from "#PLUGINS/services/src/js/pages/task-details/TaskFileBrowser";
 import TaskFileViewer from "#PLUGINS/services/src/js/pages/task-details/TaskFileViewer";
@@ -34,6 +35,17 @@ const jobsRoutes = [
           {
             type: Route,
             path: ":id"
+          }
+        ]
+      },
+      {
+        type: Route,
+        component: JobsOverview,
+        path: "overview2",
+        children: [
+          {
+            type: Route,
+            path: ":path"
           }
         ]
       },
