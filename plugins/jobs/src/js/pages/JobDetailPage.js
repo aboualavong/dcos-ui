@@ -117,8 +117,9 @@ class JobDetailPage extends mixin(TabsMixin) {
           actions={this.getActions()}
           breadcrumbs={
             <Breadcrumbs
-              states={this.renderBreadcrumbStates(breadcrumbJob)}
-              item={breadcrumbJob}
+              jobInfo={this.renderBreadcrumbStates(breadcrumbJob)}
+              path={breadcrumbJob.path}
+              name={breadcrumbJob.name}
             />
           }
           tabs={this.getTabs()}
